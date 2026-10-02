@@ -63,11 +63,30 @@ export const metadata = {
     siteName: 'FOLU Dev Portfolio',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${siteUrl}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: 'FOLU Dev | Full-stack Developer & Cybersecurity Specialist',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FOLU Dev | Full-stack Developer & Cybersecurity Specialist',
     description: 'Engineering resilient full-stack applications and fortified zero-trust security architectures.',
+    site: '@foludev',
+    creator: '@foludev',
+    images: [
+      {
+        url: `${siteUrl}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: 'FOLU Dev | Full-stack Developer & Cybersecurity Specialist',
+      },
+    ],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',

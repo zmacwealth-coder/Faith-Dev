@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Hero Header Text */}
         <div className="hero-header-content">
-          <div className="section-tag">Welcome to my portfolio</div>
+          <div className="section-tag">You're Welcome</div>
           <h1 className="hero-title">
             I&apos;m <span className="highlight-text">Folu Dev<span className="title-sparkle">✦</span></span>
           </h1>
