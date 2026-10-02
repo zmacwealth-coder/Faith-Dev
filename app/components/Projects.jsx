@@ -27,20 +27,20 @@ const PROJECTS_DATA = [
   {
     id: 'siem-threat-analysis',
     cat: "Cybersecurity / SecOps / Threat Intel",
-    title: "Cloud SIEM, Log Forensics & Threat Engine",
-    summary: "Defensive security telemetry platform streaming real-time event logs, automating CVE correlation, and visualizing attack vectors with machine-speed incident response playbooks.",
-    tags: ["Python", "Docker", "PostgreSQL", "React"],
-    stat: "10k+ Events/sec / Automated Containment",
+    title: "Enterprise SIEM & SOC Threat Analysis Engine",
+    summary: "Defensive security monitoring and log forensics architecture utilizing Wazuh agent telemetry, Splunk indexing, Linux kernel auditing (auditd), and custom Python automated incident response rules.",
+    tags: ["Wazuh SIEM", "Splunk", "Linux Security", "Python"],
+    stat: "Wazuh & Splunk / 10k+ Logs/sec",
     featured: true,
     image: "/assets/projects/project-vulnscan.jpg",
     details: {
-      problem: "High-volume distributed microservices generate disparate log streams that overwhelm security teams, leading to delayed detection of brute-force attacks and privilege misuse.",
-      solution: "Built an asynchronous Python ingestion pipeline parsing syslog and JSON audit streams, cross-referencing MITRE ATT&CK patterns and triggering automated IP quarantine webhooks.",
+      problem: "Enterprise infrastructures suffer from distributed visibility blind spots, fragmented Linux system logs, and stealthy lateral adversary movements that evade conventional boundary firewalls.",
+      solution: "Deployed Wazuh EDR agents across production Linux clusters integrated with Splunk Universal Forwarders, authoring custom Python decoders, active response scripts, and automated rule correlation against MITRE ATT&CK tactics.",
       highlights: [
-        "Sub-second log ingestion pipeline handling over 10,000 events per second",
-        "Automated CVE vulnerability matching against NIST NVD feeds",
-        "Interactive threat radar charts and geo-IP anomaly mapping",
-        "Automated incident response webhooks for Slack and Discord alerts"
+        "Configured Wazuh SIEM manager with custom XML decoders and active response triggers",
+        "Engineered Splunk search queries and dashboards for authentication anomalies and privilege escalation",
+        "Automated Linux auditd, syslog, and file integrity monitoring (FIM) via modular Python scripts",
+        "Triggered automated incident containment blocking malicious IPs and isolating compromised endpoints"
       ]
     }
   },
