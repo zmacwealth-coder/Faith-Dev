@@ -32,19 +32,19 @@ export default function Contact() {
     setStatus({ loading: true, success: false, error: '' });
 
     try {
-      // 1. Compile formatted WhatsApp message
+      // 1. Compile formatted WhatsApp message (Zero Em Dashes)
       const serviceLabel = SERVICE_LABELS[formData.service] || formData.service;
       const compiledMessage =
-        `*New Project Inquiry — FOLU Dev*
+        `*New Project Inquiry: FOLU Dev*
 
-👤 *Client Name:* ${formData.name.trim()}
-📧 *Email:* ${formData.email.trim()}
-🛠 *Service Required:* ${serviceLabel}
+Client Name: ${formData.name.trim()}
+Email: ${formData.email.trim()}
+Service Required: ${serviceLabel}
 
-📝 *Project Details:*
+Project Details:
 ${formData.message.trim()}
 
-— Sent from FOLU Dev Portfolio`;
+Sent from FOLU Dev Portfolio`;
 
       const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(compiledMessage)}`;
 
@@ -74,7 +74,7 @@ ${formData.message.trim()}
       <div className="section-container">
         <div className="contact-box-card">
           <div className="contact-left">
-            <span className="section-tag">— Let&apos;s Collaborate</span>
+            <span className="section-tag">Let&apos;s Collaborate</span>
             <h2 className="contact-title">Have a project or security audit in mind?</h2>
             <p className="contact-description">
               Whether you need a high-performance Next.js application, resilient PostgreSQL database design, or comprehensive cybersecurity evaluation, let&apos;s talk.
@@ -92,7 +92,7 @@ ${formData.message.trim()}
             <div className="contact-methods">
               <div className="c-method-item">
                 <span className="c-method-label">Direct Email</span>
-                <a href="mailto:Folaoluwa001@gmail.com" className="c-method-val">folaoluwa001@gmail.com</a>
+                <a href="mailto:folaoluwa001@gmail.com" className="c-method-val">folaoluwa001@gmail.com</a>
               </div>
               <div className="c-method-item">
                 <span className="c-method-label">Role Focus</span>
@@ -112,7 +112,7 @@ ${formData.message.trim()}
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="e.g. Alex Johnson"
+                  autoComplete="name"
                 />
               </div>
               <div className="form-group">
@@ -124,7 +124,7 @@ ${formData.message.trim()}
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="alex@company.com"
+                  autoComplete="email"
                 />
               </div>
               <div className="form-group">
@@ -151,7 +151,6 @@ ${formData.message.trim()}
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder="Tell me about your project goals, timeline, and stack..."
                 ></textarea>
               </div>
 

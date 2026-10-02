@@ -6,11 +6,11 @@ import Image from 'next/image';
 const PROJECTS_DATA = [
   {
     id: 'secureauth',
-    cat: "Full-Stack SaaS • Cybersecurity",
+    cat: "Full-Stack SaaS / Cybersecurity",
     title: "SecureAuth Guard & IAM Platform",
     summary: "Enterprise Identity & Access Management system with biometric OAuth2, PostgreSQL Row-Level Security, and automated brute-force defense built with Next.js and Node.js.",
     tags: ["Next.js", "PostgreSQL", "Node.js", "Vercel"],
-    stat: "99.99% Uptime • Zero Breaches",
+    stat: "99.99% Uptime / Zero Breaches",
     featured: false,
     image: "/assets/projects/project-auth.jpg",
     details: {
@@ -26,7 +26,7 @@ const PROJECTS_DATA = [
   },
   {
     id: 'vulnscan',
-    cat: "Cybersecurity • Automation",
+    cat: "Cybersecurity / Automation",
     title: "VulnScan: Python Automated Security Engine",
     summary: "Continuous penetration testing and dependency scanner detecting CVEs across microservices in real time, integrated with automated alert webhooks and compliance reports.",
     tags: ["Python", "PostgreSQL", "React", "Docker"],
@@ -46,7 +46,7 @@ const PROJECTS_DATA = [
   },
   {
     id: 'payflow',
-    cat: "Fintech Platform • Cloud",
+    cat: "Fintech Platform / Cloud",
     title: "PayFlow High-Throughput Relational Engine",
     summary: "Ultra-low latency financial transaction ledger powered by PostgreSQL connection pooling, Next.js server actions, and end-to-end encrypted payload validation.",
     tags: ["React", "Next.js", "PostgreSQL", "Vercel"],
@@ -93,7 +93,7 @@ export default function Projects() {
       <div className="section-container">
         <div className="section-header-flex">
           <div>
-            <span className="section-tag">— Proven Track Record</span>
+            <span className="section-tag">Proven Track Record</span>
             <h2 className="section-title">Featured <span className="highlight-text">Works</span></h2>
           </div>
           <p className="section-lead-text">
@@ -171,11 +171,11 @@ export default function Projects() {
               </button>
             </div>
 
-            {/* Optimized Next.js Sample Image */}
+            {/* Optimized Next.js Image */}
             <div className="modal-image-container">
               <Image
                 src={activeProject.image}
-                alt={`${activeProject.title} Dashboard Preview`}
+                alt={`Technical architecture and production dashboard preview for ${activeProject.title}`}
                 width={1200}
                 height={675}
                 priority
@@ -212,7 +212,7 @@ export default function Projects() {
               <div className="modal-footer-stats">
                 <div className="modal-tags">
                   {activeProject.tags.map((t, idx) => (
-                    <span key={idx} className="modal-pill">{t}</span>
+                    <span key={idx} className="modal-tag">{t}</span>
                   ))}
                 </div>
                 <div className="modal-metric-badge">
@@ -225,10 +225,10 @@ export default function Projects() {
                 <a
                   href="#contact"
                   onClick={() => setActiveProject(null)}
-                  className="btn btn-coral-pill modal-cta-btn"
+                  className="btn btn-coral modal-cta-btn"
                 >
                   <span>Inquire About This Solution</span>
-                  <span className="btn-pill-icon">➔</span>
+                  <span className="btn-icon">➔</span>
                 </a>
               </div>
             </div>

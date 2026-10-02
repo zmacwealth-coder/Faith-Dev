@@ -4,7 +4,7 @@ import Marquee from './components/Marquee';
 import Services from './components/Services';
 import Stack from './components/Stack';
 import Projects from './components/Projects';
-import Testimonials from './components/Testimonials';
+import Standards from './components/Standards';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -18,7 +18,7 @@ export default function Home() {
         <Services />
         <Stack />
         <Projects />
-        <Testimonials />
+        <Standards />
         <Contact />
       </main>
       <Footer />

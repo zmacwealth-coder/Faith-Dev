@@ -31,12 +31,12 @@ export default function Header() {
             <li><a href="#services" className="nav-link">Services</a></li>
             <li><a href="#stack" className="nav-link">Tech Stack</a></li>
             <li><a href="#projects" className="nav-link">Projects</a></li>
-            <li><a href="#testimonials" className="nav-link">Testimonials</a></li>
+            <li><a href="#standards" className="nav-link">Standards</a></li>
           </ul>
         </nav>
 
         <div className="header-actions">
-          <a href="#contact" className="btn btn-black btn-pill">Contact Me</a>
+          <a href="#contact" className="btn btn-black">Contact Me</a>
           <button
             className="mobile-toggle"
             onClick={toggleMobileMenu}
@@ -57,7 +57,7 @@ export default function Header() {
           <li><a href="#services" onClick={closeMobileMenu} className="mobile-nav-link">Services</a></li>
           <li><a href="#stack" onClick={closeMobileMenu} className="mobile-nav-link">Tech Stack</a></li>
           <li><a href="#projects" onClick={closeMobileMenu} className="mobile-nav-link">Projects</a></li>
-          <li><a href="#testimonials" onClick={closeMobileMenu} className="mobile-nav-link">Testimonials</a></li>
+          <li><a href="#standards" onClick={closeMobileMenu} className="mobile-nav-link">Standards</a></li>
           <li><a href="#contact" onClick={closeMobileMenu} className="mobile-nav-link mobile-contact-btn">Contact Me</a></li>
         </ul>
       </div>

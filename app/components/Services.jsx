@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const SERVICES_DATA = [
   {
@@ -47,7 +48,7 @@ const SERVICES_DATA = [
 ];
 
 export default function Services() {
-  const [activeId, setActiveId] = useState(2); // default open 02 as in reference screenshot
+  const [activeId, setActiveId] = useState(2);
 
   const handleToggle = (id) => {
     setActiveId(prev => (prev === id ? null : id));
@@ -59,14 +60,14 @@ export default function Services() {
         
         <div className="services-header-row">
           <div className="services-header-left">
-            <span className="section-tag">— My Specialization</span>
+            <span className="section-tag">Specialization</span>
             <h2 className="section-title">
               Services <span className="highlight-text">I Provide</span> <span className="title-sparkle">✦</span>
             </h2>
           </div>
           <div className="services-header-right">
             <p className="section-lead-text">
-              I combine robust software engineering with deep security protocols to create web applications that are resilient against attacks, blazing fast, and architected for enterprise growth.
+              Combining robust software engineering with deep security protocols to create web applications that are resilient against attacks, fast, and architected for enterprise growth.
             </p>
           </div>
         </div>
@@ -106,7 +107,7 @@ export default function Services() {
                       <button
                         onClick={() => handleToggle(service.id)}
                         className="card-action-circle"
-                        aria-label="Collapse service"
+                        aria-label="Collapse service details"
                       >
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                           <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -118,7 +119,7 @@ export default function Services() {
                     <div className="card-inner-top">
                       <div className="service-tags-row">
                         {service.tags.map((tag, idx) => (
-                          <span key={idx} className="sub-pill">{tag}</span>
+                          <span key={idx} className="sub-tag">{tag}</span>
                         ))}
                       </div>
                     </div>
@@ -129,15 +130,16 @@ export default function Services() {
 
                     {service.hasPreview && service.previewImg && (
                       <div className="service-preview-box">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src={service.previewImg}
-                          alt={`${service.title} Mockup`}
+                          alt={`Technical preview of ${service.title} architecture and security console`}
+                          width={600}
+                          height={340}
                           className="service-preview-img"
                         />
                         <div className="preview-overlay-info">
-                          <span className="badge-mini">Live Architecture</span>
-                          <span className="badge-status">Protected & Encrypted</span>
+                          <span className="badge-mini">Production Architecture</span>
+                          <span className="badge-status">Hardened &amp; Encrypted</span>
                         </div>
                       </div>
                     )}
@@ -148,11 +150,11 @@ export default function Services() {
           })}
         </div>
 
-        {/* Section Bottom Button (Pill matching reference) */}
+        {/* Section Bottom Button */}
         <div className="services-footer-action">
-          <a href="#contact" className="btn-coral-pill">
-            <span>View All Services</span>
-            <span className="btn-pill-icon">
+          <a href="#contact" className="btn btn-coral">
+            <span>Inquire About Services</span>
+            <span className="btn-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>

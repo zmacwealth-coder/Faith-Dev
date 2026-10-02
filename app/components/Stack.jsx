@@ -72,7 +72,7 @@ export default function Stack() {
     <section className="stack-section" id="stack">
       <div className="section-container">
         <div className="center-header">
-          <span className="section-tag">— Core Arsenal</span>
+          <span className="section-tag">Core Arsenal</span>
           <h2 className="section-title">Built with <span className="highlight-text">Proven Technologies</span></h2>
           <p className="section-lead-text centered">
             A battle-tested stack combining modern web frameworks, resilient databases, and defensive security tooling.
