@@ -1088,10 +1088,10 @@ button {
 
 .tech-badge {
   align-self: flex-start;
-  padding: 4px 12px;
+  padding: 4px 10px;
   background: #F4F4F5;
   color: #52525B;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   font-size: 0.75rem;
   font-weight: 600;
 }

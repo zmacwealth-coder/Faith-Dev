@@ -3,7 +3,7 @@ export default function Stack() {
     {
       name: "Next.js",
       category: "Full-Stack Core",
-      desc: "Production-ready SSR, App Router, React Server Components & Edge rendering.",
+      desc: "Production-ready SSR, App Router, React Server Components, and Edge rendering pipelines.",
       isOrange: false,
       svg: (
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -12,20 +12,49 @@ export default function Stack() {
       )
     },
     {
-      name: "PostgreSQL",
-      category: "Database",
-      desc: "Rock-solid relational data modeling, indexing, ACID transactions & Row Level Security.",
+      name: "Wazuh SIEM",
+      category: "SIEM & EDR Security",
+      desc: "Endpoint telemetry, custom XML decoders, active response scripts, and File Integrity Monitoring (FIM).",
       isOrange: true,
       svg: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      )
+    },
+    {
+      name: "Splunk",
+      category: "Log Analytics & SOC",
+      desc: "Search Processing Language (SPL), correlation search rules, SOC alert dashboards, and audit forensics.",
+      isOrange: false,
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <path d="m7 15 3-3-3-3"/>
+          <path d="M13 15h4"/>
+        </svg>
+      )
+    },
+    {
+      name: "Linux Security",
+      category: "Host Defense & Kernel",
+      desc: "Linux kernel auditing (auditd), system hardening, PAM authentication, and automated bash security orchestration.",
+      isOrange: true,
+      svg: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <polyline points="7 8 10 10 7 12"/>
+          <line x1="12" y1="12" x2="15" y2="12"/>
         </svg>
       )
     },
     {
       name: "Python",
-      category: "Security & Logic",
-      desc: "FastAPI microservices, security scanning scripts, data automation & cryptographic verification.",
+      category: "Security Automation",
+      desc: "Threat intelligence scrapers, automated vulnerability scanners, custom SIEM log parsers, and API microservices.",
       isOrange: false,
       svg: (
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -34,9 +63,20 @@ export default function Stack() {
       )
     },
     {
+      name: "PostgreSQL",
+      category: "Database & RLS",
+      desc: "Rock-solid relational data modeling, indexing, ACID transactions, and Row Level Security (RLS) policies.",
+      isOrange: true,
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
+        </svg>
+      )
+    },
+    {
       name: "Node.js",
       category: "Backend Engine",
-      desc: "Event-driven asynchronous APIs, microservices, websockets & secure token authentication.",
+      desc: "Event-driven asynchronous APIs, microservices, encrypted WebSockets, and secure JWT rotation pipelines.",
       isOrange: false,
       svg: (
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -45,24 +85,14 @@ export default function Stack() {
       )
     },
     {
-      name: "React",
-      category: "Frontend Mastery",
-      desc: "Reusable design systems, state machines, custom hooks & accessible interfaces.",
+      name: "OWASP & Defense",
+      category: "Application Hardening",
+      desc: "Penetration testing, vulnerability assessments, Nmap network audits, and mitigation against OWASP Top 10 exploits.",
       isOrange: false,
       svg: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-17.93c-3.95.49-7 3.85-7 7.93 0 4.42 3.58 8 8 8 4.08 0 7.44-3.05 7.93-7h-2.02c-.46 2.84-2.92 5-5.91 5-3.31 0-6-2.69-6-6 0-2.99 2.16-5.45 5-5.91V4.07z"/>
-        </svg>
-      )
-    },
-    {
-      name: "Vercel",
-      category: "Cloud & DevOps",
-      desc: "Automated CI/CD pipelines, Edge middleware, serverless functions & global CDN caching.",
-      isOrange: true,
-      svg: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
         </svg>
       )
     }
