@@ -5,62 +5,102 @@ import Image from 'next/image';
 
 const PROJECTS_DATA = [
   {
-    id: 'secureauth',
-    cat: "Full-Stack SaaS / Cybersecurity",
-    title: "SecureAuth Guard & IAM Platform",
-    summary: "Enterprise Identity & Access Management system with biometric OAuth2, PostgreSQL Row-Level Security, and automated brute-force defense built with Next.js and Node.js.",
-    tags: ["Next.js", "PostgreSQL", "Node.js", "Vercel"],
-    stat: "99.99% Uptime / Zero Breaches",
+    id: 'school-management',
+    cat: "EdTech / Cybersecurity / RBAC",
+    title: "SecureAuth Guard School Management System",
+    summary: "Enterprise-grade multi-tenant educational platform featuring fine-grained role-based access control (RBAC), biometric student and faculty authentication, encrypted student records, and automated attendance pipelines.",
+    tags: ["Next.js", "PostgreSQL RLS", "TypeScript", "Node.js"],
+    stat: "Zero Data Leaks / 50k+ Active Records",
     featured: false,
     image: "/assets/projects/project-auth.jpg",
     details: {
-      problem: "Organizations needed a zero-trust authentication gateway that handles high-concurrency OAuth2 logins while actively detecting credential stuffing and token tampering.",
-      solution: "Engineered a Next.js Server Components architecture coupled with PostgreSQL Row-Level Security (RLS) and cryptographic JWT rotation. Added real-time IP rate-limiting and biometric WebAuthn verification.",
+      problem: "Educational institutions handle sensitive minor records and financial transactions while facing frequent credential sharing and unauthorized privilege escalation.",
+      solution: "Implemented Next.js Server Components with strict PostgreSQL Row-Level Security (RLS) isolating student and grade records per tenant, combined with time-based OTP and cryptographic audit trails.",
       highlights: [
-        "Biometric passkey and hardware token support (WebAuthn)",
-        "PostgreSQL connection pooling via PgBouncer for sub-30ms session checks",
-        "Automated rate-limiting on Vercel Edge Middleware",
-        "Comprehensive audit logging with AES-256 encrypted storage"
+        "Role-based access matrix separating Admin, Faculty, Student, and Parent tiers",
+        "PostgreSQL Row-Level Security ensuring 100% data partition isolation",
+        "Biometric and passkey attendance tracking via WebAuthn",
+        "Real-time fee payment gateway with encrypted receipt verification"
       ]
     }
   },
   {
-    id: 'vulnscan',
-    cat: "Cybersecurity / Automation",
-    title: "VulnScan: Python Automated Security Engine",
-    summary: "Continuous penetration testing and dependency scanner detecting CVEs across microservices in real time, integrated with automated alert webhooks and compliance reports.",
-    tags: ["Python", "PostgreSQL", "React", "Docker"],
-    stat: "Over 1,200 Audits Completed",
+    id: 'siem-threat-analysis',
+    cat: "Cybersecurity / SecOps / Threat Intel",
+    title: "Cloud SIEM, Log Forensics & Threat Engine",
+    summary: "Defensive security telemetry platform streaming real-time event logs, automating CVE correlation, and visualizing attack vectors with machine-speed incident response playbooks.",
+    tags: ["Python", "Docker", "PostgreSQL", "React"],
+    stat: "10k+ Events/sec / Automated Containment",
     featured: true,
     image: "/assets/projects/project-vulnscan.jpg",
     details: {
-      problem: "Modern CI/CD pipelines often miss ephemeral runtime vulnerabilities and outdated dependencies until production security audits.",
-      solution: "Developed an asynchronous Python microservice that triggers non-intrusive penetration checks, CVE database lookups, and code-level vulnerability radar mapping with instant Slack/Discord webhooks.",
+      problem: "High-volume distributed microservices generate disparate log streams that overwhelm security teams, leading to delayed detection of brute-force attacks and privilege misuse.",
+      solution: "Built an asynchronous Python ingestion pipeline parsing syslog and JSON audit streams, cross-referencing MITRE ATT&CK patterns and triggering automated IP quarantine webhooks.",
       highlights: [
-        "Real-time CVE-2024 database synchronizer with NIST feed",
-        "Automated Docker container vulnerability scanning",
-        "Interactive vulnerability radar charts built in React",
-        "Exportable ISO/IEC 27001 compliance audit reports"
+        "Sub-second log ingestion pipeline handling over 10,000 events per second",
+        "Automated CVE vulnerability matching against NIST NVD feeds",
+        "Interactive threat radar charts and geo-IP anomaly mapping",
+        "Automated incident response webhooks for Slack and Discord alerts"
       ]
     }
   },
   {
-    id: 'payflow',
-    cat: "Fintech Platform / Cloud",
-    title: "PayFlow High-Throughput Relational Engine",
-    summary: "Ultra-low latency financial transaction ledger powered by PostgreSQL connection pooling, Next.js server actions, and end-to-end encrypted payload validation.",
-    tags: ["React", "Next.js", "PostgreSQL", "Vercel"],
-    stat: "< 45ms Query Latency",
+    id: 'hospital-management',
+    cat: "HealthTech / Cloud / HIPAA Compliance",
+    title: "Hospital Management & Clinical Operations Dashboard",
+    summary: "Mission-critical healthcare operations suite coordinating real-time patient triage, electronic health records (EHR), automated bed allocation, and encrypted clinician messaging.",
+    tags: ["Next.js", "PostgreSQL", "Tailwind & CSS", "Vercel"],
+    stat: "HIPAA Compliant / < 35ms Query Speed",
     featured: false,
-    image: "/assets/projects/project-payflow.jpg",
+    image: "/assets/projects/project-hms.jpg",
     details: {
-      problem: "Fintech payment processing demands deterministic ACID compliance without compromising checkout responsiveness or security verification.",
-      solution: "Architected a double-entry relational ledger on PostgreSQL with pessimistic row locking and idempotent Next.js Server Actions, deployed globally across Vercel Edge networks.",
+      problem: "Hospital departments suffer from fragmented scheduling, delayed patient bed assignments, and non-compliant access to protected health information (PHI).",
+      solution: "Engineered an end-to-end encrypted clinical dashboard powered by Next.js Server Components, real-time WebSocket state synchronization, and audit-logged medical history retrieval.",
       highlights: [
-        "P95 query latency kept under 45ms across 10,000+ daily transactions",
-        "Idempotency keys preventing double charging on network drops",
-        "Automated reconciliation workers written in Node.js",
-        "Strict Content Security Policy (CSP) and encrypted request bodies"
+        "End-to-end encryption for all Patient Health Information (PHI)",
+        "Dynamic triage queue and automated inpatient bed allocation",
+        "Sub-35ms query latency on high-concurrency electronic health records",
+        "Granular emergency-override audit trails compliant with HIPAA standards"
+      ]
+    }
+  },
+  {
+    id: 'real-estate-platform',
+    cat: "PropTech / Architecture / Dynamic Web",
+    title: "Dynamic Premium Real Estate Web App",
+    summary: "Luxury architectural property portal featuring interactive neighborhood mapping, 360-degree virtual property tours, real-time mortgage estimation, and high-conversion client inquiry portals.",
+    tags: ["Next.js", "React", "PostgreSQL", "Edge Functions"],
+    stat: "4K Virtual Tours / Sub-second Search",
+    featured: false,
+    image: "/assets/projects/project-realestate.jpg",
+    details: {
+      problem: "High-end real estate buyers require photorealistic visual immersion and instant property filtering without suffering sluggish page speeds or cumbersome consultation forms.",
+      solution: "Developed a dynamic, editorial property showcase leveraging Next.js streaming SSR, geospatial PostgreSQL queries for neighborhood insights, and GPU-accelerated interactive 360 virtual tours.",
+      highlights: [
+        "Dynamic filter engine for luxury estates with sub-second geospatial queries",
+        "Interactive 360-degree virtual walkthrough viewer and floor plan explorer",
+        "Integrated real-time mortgage amortizer and financial scenario modeler",
+        "Secure client inquiry portal with encrypted buyer documentation exchange"
+      ]
+    }
+  },
+  {
+    id: 'car-sales-rentals-pwa',
+    cat: "Automotive / E-Commerce / PWA",
+    title: "Car Sales & Fleet Rentals Cross-Platform PWA",
+    summary: "High-performance Progressive Web App delivering cross-platform vehicle reservations, real-time inventory synchronization, offline booking queues, and digital lease contracts.",
+    tags: ["Next.js", "PWA", "PostgreSQL", "Node.js"],
+    stat: "Installable PWA / 99.8% Offline Resiliency",
+    featured: false,
+    image: "/assets/projects/project-carrental.jpg",
+    details: {
+      problem: "Car dealerships and rental agencies face high customer drop-off on slow mobile web pages and require separate native apps for offline showroom inspections.",
+      solution: "Built an installable Progressive Web Application (PWA) with service worker background sync, dynamic vehicle search filters, and instant booking payment pipelines that run seamlessly across iOS, Android, and desktop.",
+      highlights: [
+        "Installable PWA with offline-first caching for vehicle showroom tours",
+        "Cross-platform responsive UX with native-like gestures and push notifications",
+        "Automated vehicle availability calendar with real-time double-booking prevention",
+        "Integrated digital signature capture and automated PDF contract generation"
       ]
     }
   }

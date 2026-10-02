@@ -94,6 +94,11 @@ export default function RootLayout({ children }) {
           'Node.js',
           'Python',
           'Cybersecurity Hardening',
+          'SIEM and Threat Forensics',
+          'School Management Systems and RBAC',
+          'Hospital Management Systems and EHR',
+          'Dynamic Real Estate Applications',
+          'Progressive Web Applications (PWA)',
           'Penetration Testing',
           'OWASP Vulnerability Mitigation',
           'Cloud Architecture'

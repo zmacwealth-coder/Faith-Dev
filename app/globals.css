@@ -1206,10 +1206,10 @@ button {
 }
 
 .project-tech-tags span {
-  padding: 4px 12px;
+  padding: 4px 10px;
   background: #F4F4F5;
   border: 1px solid #E4E4E7;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   font-size: 0.78rem;
   font-weight: 600;
   color: #3F3F46;
@@ -1230,9 +1230,9 @@ button {
 }
 
 .project-link-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-full);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
   background: var(--dark-bg);
   color: #FFFFFF;
   display: flex;
