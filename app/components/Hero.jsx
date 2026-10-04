@@ -84,7 +84,14 @@ export default function Hero() {
                   </svg>
                 </span>
               </a>
-              <a href="#contact" className="cta-btn-light">Contact Me</a>
+              <a
+                href="/assets/Faith%20Olaoluwa%20_%20Fullstack%20Developer%20%26%20Security%20Engineer%20CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn-light"
+              >
+                My CV Here
+              </a>
             </div>
           </div>
 
